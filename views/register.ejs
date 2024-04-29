@@ -1,0 +1,155 @@
+<%- include("partials/header") -%>
+<script type="text/javascript">
+    function displayForm(c) {
+        if (c.value == "1") {
+            document.getElementById("ngo").style.visibility = 'visible';
+            document.getElementById("restaurant").style.visibility = 'hidden';
+        } else if (c.value == "2") {
+            document.getElementById("ngo").style.visibility = 'hidden';
+            document.getElementById("restaurant").style.visibility = 'visible';
+        } else {}
+    }
+
+    function message(){
+        alert("Your registration has been sent for approval. \nClick OK to go back to the home page.")
+    }
+
+    function validateForm() {
+        var form = document.getElementById("ngoform");
+        var inputs = form.getElementsByTagName("input");
+
+        for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].hasAttribute("required") && inputs[i].value === "") {
+                alert("Please fill in all required fields.");
+                return false;
+            }
+        }
+        message(); // Call message() only if all fields are filled
+        return true;
+    }
+</script>
+<div class="registrationpage">
+    <div class="head container-fluid">
+        <nav class="hpnavbar navbar navbar-expand-lg navbar-dark bg-dark">
+            <a href="#" class="navbar-brand feedly">FoodXTRA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">LogOut</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <br><br>
+    <div style="margin: auto; width: 10%;">
+        <form style="display: flex; flex-direction:column;">
+            <label class="btn btn-dark" style="color: darkgreen;"><input value="1" type="button" name="formselector" onclick="displayForm(this)" class="btn btn-success"><p class="title2">NGO</p></label>
+            <label class="btn btn-dark" style="color: darkgreen;"><input value="2" type="button" name="formselector" onclick="displayForm(this)" class="btn btn-success "><p class="title2">Restaurant</p></label>
+        </form>
+    </div>
+
+    <div style="visibility:hidden" class="ngoReg" id="ngo" style="padding-top: 100px;">
+        <h1 style="margin:auto;">NGOs Registration Page</h1><br>
+        <div class="all_reg">
+            <form action="/register" method="POST" id="ngoform" onsubmit="return validateForm();">
+                <table>
+                    <tr>
+                        <td><label style="text-align: left;" ><b>NGO Name</b></label></td>
+                        <td><input style="text-align: left;" type="text" name="name" placeholder="Enter NGO name" required>
+                            <br><br></td>
+                    </tr>
+                    <tr>
+                        <td><label style="text-align: left;" ><b>NGO Type</b></label></td>
+                        <td><input style="text-align: left;" type="text" name="type" placeholder="Enter the NGO Type" required>
+                            <br><br></td>
+                    </tr>
+                    <tr>
+                        <td><label style="text-align: left;" ><b>Unique ID</b></label></td>
+                        <td><input style="text-align: left;" type="text" name="uniqueid" placeholder="Enter the Unique ID" required>
+                            <br><br></td>
+                    </tr>
+                    <tr>
+                        <td><label style="text-align: left;" ><b>Phone Number</b></label></td>
+                        <td><input style="text-align: left;" type="text" name="phno" placeholder="Enter the contact number" required>
+                            <br><br></td>
+                    </tr>
+                    <tr>
+                        <td><label style="text-align: left;" ><b>Email</b></label></td>
+                        <td><input style="text-align: left;" type="email" name="email" placeholder="Enter the email ID" required>
+                            <br><br></td>
+                    </tr>
+                    <tr>
+                        <td><label style="text-align: left;" ><b>Address(State, district, sector)</b></label></td>
+                        <td><input style="text-align: left;" type="text" name="address" placeholder="Enter your HQ address" required>
+                            <br><br></td>
+                    </tr>
+                    <tr>
+                        <td><label style="text-align: left;" ><b>Password</b></label></td>
+                        <td><input style="text-align: left;" type="password" name="password" placeholder="Enter your desired password" required>
+                            <br><br></td>
+                    </tr>
+                    <tr>
+                        <td><label style="text-align: left;" ><b>Upload documents(Official documents that verify the organization)</b></label></td>
+                        <td><input style="text-align: left;" type="file" name="documents" placeholder="Upload the documents" required><br><br></td>
+                    </tr>
+                </table>
+                <button style="text-align: center;" type="submit" class="btn btn-dark">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <div style="visibility:hidden" class="restReg" id="restaurant">
+        <h1 style="margin:auto; color: rgb(8, 8, 8);">Restaurant Registration Page</h1>
+        <div class="restReg1">
+            <form action="/register1" method="POST">
+                <div class="all_reg" style="padding-right:50px;padding-top: 25px;">
+                    <table>
+                        <tr>
+                            <td><label style="text-align: left; color: rgb(2, 2, 2);"><b>Restaurant Name</b></label></td>
+                            <td><input style="text-align: left; color: rgb(10, 10, 10);" type="text" name="name" placeholder="Enter Restaurant name" required>
+                                <br><br></td>
+                        </tr>
+                        <tr>
+                            <td><label style="text-align: left; color: rgb(5, 5, 5);"><b>FSSAI License Number</b></label></td>
+                            <td><input style="text-align: left; color: rgb(6, 5, 5);" type="text" name="fssai" placeholder="Enter the FSSAI number" required>
+                                <br><br></td>
+                        </tr>
+                        <tr>
+                            <td><label style="text-align: left; color: rgb(14, 14, 14);"><b>Phone Number</b></label></td>
+                            <td><input style="text-align: left; color: rgb(7, 7, 7);" type="text" name="phno" placeholder="Enter the phone number" required>
+                                <br><br></td>
+                        </tr>
+                        <tr>
+                            <td><label style="text-align: left; color: rgb(13, 13, 13);"><b>Email</b></label></td>
+                            <td><input style="text-align: left; color: rgb(10, 10, 10);" type="text" name="email" placeholder="Enter the email id" required>
+                                <br><br></td>
+                        </tr>
+                        <tr>
+                            <td><label style="text-align: left; color: rgb(11, 11, 11);"><b>Address(State, District, Sector)</b></label></td>
+                            <td><input style="text-align: left; color: rgb(5, 5, 5);" type="text" name="address" placeholder="Enter the address" required>
+                                <br><br></td>
+                        </tr>
+                        <tr>
+                            <td><label style="text-align: left; color: rgb(3, 3, 3);"><b>Password</b></label></td>
+                            <td><input style="text-align: left; " type="password" name="password" placeholder="Enter the desired password" required>
+                                <br><br></td>
+                        </tr>
+                        <tr>
+                            <td><label><b>Upload documents(Private Limited Registration, Partnership or LLP Registration, FSSAI Registration or License
+                                According to the business turnover or business size and nature, Shop act License and GST Registration in India)</b></label></td>
+                            <td><input type="file" name="documents" placeholder="Upload the documents" required><br><br></td>
+                        </tr>
+                    </table>
+                    <button style="text-align: center;" type="submit" class="btn btn-dark">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include("partials/footer") -%>
+
+

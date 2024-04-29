@@ -1,0 +1,29 @@
+<!-- admin.ejs -->
+<%- include("partials/header") -%>
+  <div class="head container-fluid">
+    <nav class="adminNavbar navbar navbar-expand-lg navbar-dark bg-dark">
+      <a href="#" class="navbar-brand feedly">FoodXTRA</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+<div class="Adminlogin">
+<form method="POST" action="/admin">
+    <label><b>Username</b></label>
+    <input type="text" name="username">
+    <br><br>
+    <label><b>Password</b></label>
+    <input type="Password" name="password">
+    <br><br>
+    <input type="submit" name="log" value="Log In">
+    <br><br>
+</form>
+</div>
+<%- include("partials/footer") -%>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant's Location</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .order-tracking-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .order-tracking-form input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .order-tracking-form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .map-container {
+            height: 300px;
+            background-color: #ccc;
+            margin-bottom: 20px;
+        }
+        .order-status {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .order-status .status-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #ccc;
+            border: 2px solid #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Restaurant's Location</h1>
+        <div class="order-tracking-form">
+            <input type="text" name="order_id" placeholder="Enter Order ID" required>
+            <input type="text" name="email" placeholder="Enter Email" required>
+            <input type="submit" value="Track">
+        </div>
+        <div class="map-container">
+            <!-- Placeholder for map -->
+            <p> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7206.531303483349!2d81.7664122422785!3d25.429380710248694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399acda4892cc187%3A0xb07e2e87ab51e82a!2sIndian%20Institute%20of%20Information%20Technology%2C%20Allahabad!5e0!3m2!1sen!2sin!4v1712702748067!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+        </div>
+        <div class="order-status">
+            <div class="status-dot" id="accepted"></div>
+            <div class="status-dot" id="in-progress"></div>
+            <div class="status-dot" id="dispatched"></div>
+            <div class="status-dot" id="out-for-delivery"></div>
+            <div class="status-dot" id="delivered"></div>
+        </div>
+    </div>
+</body>
+</html>

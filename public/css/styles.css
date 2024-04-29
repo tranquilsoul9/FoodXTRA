@@ -1,0 +1,439 @@
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Home Page */
+
+.container-fluid {
+  /* background-color:#1E5128; */
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+.hpnavbar {
+  background-color: white;
+}
+.sloganlm {
+  align-items: center;
+}
+
+.home-page {
+  background-image: url(../Images/backImage.jpeg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+.feedly {
+  font-size: 2rem;
+}
+
+.first-page {
+  background-image: url(../Images/Black_image.png);
+  background-attachment: fixed;
+  /* background-color: #D8E9A8; */
+  background-size: cover;
+  padding-bottom: 2rem;
+}
+
+.sloganlm {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  padding: 10rem 25rem;
+}
+
+.slogan {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #008000; /* dark green */
+}
+
+.slogan span {
+  color: #ffffff; /* white */
+}
+.slogan::after {
+  .slogan::after {
+    content: "Delite";
+    color: #008000; /* dark green */
+  }
+  }
+  .about-us .abtusTitle {
+    color: white;
+  }
+.items-list {
+  /* background-image: url(../Images/bg_pink.jpg); */
+  /* background-color: #1E5128; */
+  background-size: cover;
+  padding: 6rem 10rem 15rem 10rem;
+}
+.items-list .list-title {
+  color: white;
+}
+.about-us {
+  /* background-image: url(../Images/bg-pinkk.jpg); */
+  background-size: cover;
+  padding-bottom: 2rem;
+}
+.text-box {
+  font-size: 20px;
+  background-color: #f2f6f2; /* dark green */
+  padding: 20px;
+}
+.abtusTitle {
+  padding: 2rem;
+  text-align: center;
+}
+.image-1 {
+  width: 70%;
+  position: relative;
+  left: 5rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  border-radius: 25px;
+}
+.text {
+  font-family: Montserrat, bold, sans-serif;
+  width: 30%;
+  position: relative;
+  left: 40rem;
+}
+.our-focus {
+  font-family: Montserrat, sans-serif;
+  width: 30%;
+  position: relative;
+  left: 10rem;
+  bottom: 3rem;
+}
+.process-overview {
+  /* background-image: url(../Images/backgroud_avocado.jpg); */
+  padding: 6rem 10rem 15rem 10rem;
+  background-size: cover;
+  color: white;
+}
+@media (max-width: 1180px) {
+  .sloganlm {
+    font-size: 30px;
+    text-align: center;
+    padding-left: 4rem;
+  }
+  .image-1 {
+    width: 250px;
+    height: 160px;
+  }
+  .giving-out {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  .text {
+    position: relative;
+    width: 70%;
+    margin: auto;
+    text-align: left;
+    left: 1rem;
+    /* padding-left: 2rem; */
+  }
+  .our-focus {
+    padding-top: 3rem;
+    width: 70%;
+    margin: auto;
+    position: relative;
+    text-align: left;
+    left: 1rem;
+  }
+  .feedb {
+    position: relative;
+    right: 5rem;
+    text-align: center;
+  }
+}
+/* 
+.feedback {
+  text-align: center;
+  padding-left: 18rem;
+} */
+.feedb {
+  width: 30%;
+  margin: auto;
+  text-align: center;
+}
+.idkfbfield {
+  margin-left: 0rem;
+  text-align: left;
+}
+/*    Login Page  */
+/* .hero-image{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+} */
+
+.italianno-regular {
+  font-family: "Brush Scipt MT", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#h1{
+  
+  font-family: cursive ;
+  font-size: 18px;
+  font-weight: 600;
+}
+.loginpage {
+  background-image: url(../Images/OGbg.jpg);
+  background-attachment: fixed;
+  background-size: 100% auto;
+  background-position: center;
+  height: 550px;
+  padding-bottom: 2rem;
+  text-align: center;
+  
+
+}
+
+#restaurantlogin {
+  position: relative;
+  bottom: 11rem;
+}
+.allign {
+  width: 30%;
+  margin: auto;
+}
+
+/*     Registration Page     */
+.registrationpage {
+  /* background-image: url(../Images/OGbg.jpg); */
+  background-image: url(../Images/try.jpg);
+  background-attachment: fixed;
+  background-color: #d8e9a8;
+  background-size: cover;
+  text-align: center;
+}
+.restReg {
+  position: relative;
+  bottom: 40rem;
+}
+.all_reg {
+  width: 40%;
+  padding-left: 100px;
+  margin: auto;
+  text-align: justify;
+}
+
+/*        NGO Page */
+.ngo {
+  background-image: url(public/Images/signup.jpg);
+  background-attachment: fixed;
+  background-color: white;
+  background-size: cover;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+/* .footer {
+  text-align: center;
+  margin-bottom: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+} */
+/*   NGO Profile Page  */
+.nprofile {
+  /* background-image: url(../Images/OGbg.jpg); */
+  background-image: url(../Images/khana.jpg);
+  background-attachment: fixed;
+  background-color: white;
+  background-size: cover;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+#details {
+  position: relative;
+  bottom: 5rem;
+  /*border: 2px solid black; */
+  width: 30%;
+}
+/*   Restaurant Page     */
+.restNavbar {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.Rest {
+  /* background-image: url(../Images/OGbg.jpg); */
+  background-image: url(../Images/resta.jpg);
+  background-attachment: fixed;
+  background-color: #d8e9a8;
+  background-size: cover;
+  padding-bottom: 2rem;
+}
+/*   Restaurant Profile    */
+.head {
+  padding-left: 0;
+  padding-right: 0;
+}
+.rprofile {
+  /* background-image: url(../Images/OGbg.jpg); */
+  background-image: url(../Images/food2.jpg);
+  background-attachment: fixed;
+  background-color: #d8e9a8;
+  background-size: contain;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+.restDeets {
+  align-items: center;
+}
+
+/*    Admin Login   */
+.Adminlogin {
+  /* background-image: url(../Images/OGbg.jpg); */
+  background-image: url(../Images/log_ad.png);
+  background-attachment: fixed;
+  background-color: #d8e9a8;
+  background-size: cover;
+  margin: 0;
+  padding-top: 7rem;
+  padding-bottom: 10rem;
+  text-align: center;
+}
+/*   Checking   */
+.checking {
+  /* background-image: url(../Images/OGbg.jpg); */
+  background-image: url(../Images/check.png);
+  background-attachment: fixed;
+  background-color: #d8e9a8;
+  background-size: cover;
+  margin: 0;
+  padding-top: 7rem;
+  padding-bottom: 16rem;
+  text-align: center;
+}
+/*   Approval  Pages  */
+.approval {
+  /* background-image: url(../Images/OGbg.jpg); */
+  background-image: url(../Images/ImgDisplay.png);
+  background-attachment: fixed;
+  background-color: #d8e9a8;
+  background-size: cover;
+  padding-bottom: 2rem;
+}
+.approvalNavbar {
+  width: 100%;
+}
+
+footer{
+  background-color: #333333e2;
+}
+.footerContainer{
+  width: 100%;
+  padding: 70px 30px 20px ;
+  margin-top: 1px;
+}
+.socialIcons{
+  display: flex;
+  justify-content: center;
+}
+.socialIcons a{
+  text-decoration: none;
+  padding:  10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+.socialIcons a i{
+  font-size: 2em;
+  color: black;
+  opacity: 0,9;
+}
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+  background-color: #111;
+  transition: 0.5s;
+}
+.socialIcons a:hover i{
+  color: white;
+  transition: 0.5s;
+}
+.footerNav{
+  margin: 30px 0;
+}
+.footerNav ul{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+.footerNav ul li a{
+  color:white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+  opacity: 1;
+}
+.footerBottom{
+  background-color: #333333e2;
+
+  padding: 20px;
+  text-align: center;
+}
+.footerBottom p{
+  color: white;
+}
+.designer{
+  
+  color: white;
+  
+  font-weight: 400;
+  
+}
+@media (max-width: 700px){
+  .footerNav ul{
+      flex-direction: column;
+  } 
+  .footerNav ul li{
+      width:100%;
+      text-align: center;
+      margin: 10px;
+      padding-left: 40px;
+  }
+  .socialIcons a{
+      padding: 8px;
+      margin: 4px;
+  }
+}
+.title{
+  color:rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.title2{
+  color:aqua;
+  font-weight: bold;
+  
+}
+
+.feedback-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9; 
+  border-radius: 10px; 
+}
+
+.form-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-contact input,
+.form-contact textarea {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+

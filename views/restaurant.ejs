@@ -1,0 +1,42 @@
+<%- include("partials/header") -%>
+<div class="Rest" style="background-image: url(../Images/R.jpeg);
+background-attachment: fixed;
+background-color: #D8E9A8;
+background-size: cover;
+padding-bottom: 18rem;
+text-align: center">
+  <div class="head container-fluid restNavbar" style="padding-left:0;padding-right:0;">
+    <nav class="hpnavbar navbar navbar-expand-lg navbar-dark bg-dark">
+      <a href="#" class="navbar-brand feedly">FoodXTRA</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">LogOut</a></li>
+          <li class="nav-item"><a class="nav-link" href='/rprofile/<%=restaurant%>'>Profile</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div><br><br><br><br><br>
+  <div style="padding-left: 30%;">
+    <form action="/restaurant" method="POST"><h4>
+      <table>
+        <tr>
+          <td style="text-align: left;"><label style="margin-right: 3px; padding-bottom: 20px;"><b style="color: white;">Number of food packets</b></label></td>
+          <td style="text-align: left;"><input type="Number" name="packets"><br><br></td>
+        </tr>
+        <tr>
+          <td style="text-align: left;"><label style="color: white; padding-bottom: 20px;"><b >Expiry date </b></label></td>
+          <td style="text-align: left;"><input type="date" name="expdate"><br><br></td>
+        </tr>
+        <tr>
+          <td colspan="2"><button class="btn btn-secondary" type="submit" name="rest" value="<%= restaurant %>">Submit</button></h4></td>
+        </tr>
+      </table>
+    </form><br>
+  </div>
+    
+</div>
+<%- include("partials/footer") -%>
